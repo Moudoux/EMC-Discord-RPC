@@ -1,0 +1,33 @@
+def emcVersion = "13.1.6-1.12.2"
+
+apply plugin: 'java-library'
+
+repositories {
+    mavenCentral()
+	maven {
+	 	name = 'GitHub'
+       	url "https://github.com/Moudoux/EMC/raw/master/maven/"
+    }
+    maven {
+        name = 'spongepowered-repo'
+        url = 'http://repo.spongepowered.org/maven/'
+    }
+}
+
+configurations {
+	extraLibs
+}
+
+dependencies {
+	compile 'com.google.guava:guava:24.1-jre'
+	compile 'com.google.code.gson:gson:2.8.2'
+	compile "me.deftware:EMC:${emcVersion}"
+	compile "com.github.psnrigner:discord-rpc-java:1.0.4"
+	extraLibs "com.github.psnrigner:discord-rpc-java:1.0.4"
+}
+
+jar {
+    from {
+		configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+}

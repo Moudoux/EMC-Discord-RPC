@@ -1,0 +1,11 @@
+{
+
+    "name":"EMC-Discord-RPC",
+    "website":"https://github.com/Moudoux/EMC-Discord-RPC",
+    "author":"Deftware",
+    "minversion":13.1,
+    "version":1,
+    "main":"me.deftware.emc_discord_rpc.Main",
+    "updateLinkOverride": false
+
+}
