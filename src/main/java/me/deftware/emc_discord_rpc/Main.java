@@ -83,8 +83,8 @@ public class Main extends EMCMod {
 	}
 
 	@Override
-	public EMCClientInfo getClientInfo() {
-		return new EMCClientInfo("EMC-Discord-RPC", "1.0.0");
+	public EMCModInfo getModInfo() {
+		return new EMCModInfo("EMC-Discord-RPC", "1.0.0");
 	}
 
 	@Override

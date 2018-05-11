@@ -1,4 +1,4 @@
-def emcVersion = "13.1.6-1.12.2"
+def emcVersion = "13.2.4-1.12.2"
 
 apply plugin: 'java-library'
 
