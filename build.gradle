@@ -1,12 +1,12 @@
-def emcVersion = "13.2.4-1.12.2"
+def emcVersion = "13.3.3-1.12.2"
 
 apply plugin: 'java-library'
 
 repositories {
     mavenCentral()
-	maven {
-	 	name = 'GitHub'
-       	url "https://github.com/Moudoux/EMC/raw/master/maven/"
+    maven {
+	name = 'GitLab'
+       	url "https://gitlab.com/EMC-Framework/EMC/raw/master/maven/"
     }
     maven {
         name = 'spongepowered-repo'
@@ -28,6 +28,6 @@ dependencies {
 
 jar {
     from {
-		configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
-	}
+	configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
